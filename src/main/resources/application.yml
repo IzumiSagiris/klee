@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: klee
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+server:
+  port: 7071
+  servlet:
+    context-path: /klee
