@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: klee-deployment
+  namespace: prod
+  labels: 
+    app: klee
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      app: klee
+  template:
+    metadata:
+      labels:
+        app: klee
+    spec:
+      containers:
+      - name: klee
+        image: klee:1.0
+        ports:
+        - containerPort: 7071
