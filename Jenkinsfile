@@ -14,6 +14,7 @@ pipeline {
                       }
                     }
                     steps {
+                        sh 'cp ./target/klee-0.0.1-SNAPSHOT.jar .'
                         sh 'chmod +x deploy.sh'
                         sh './deploy.sh'
                     }
