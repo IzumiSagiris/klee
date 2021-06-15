@@ -32,4 +32,13 @@ public class HomeController {
         res = res + klee;
         return res;
     }
+
+    @ResponseBody
+    @GetMapping(value = {"/home/ayumu"}, produces = {"application/json"})
+    public String ayumu() throws Exception {
+        String res = "//-test jenkins deploy-// this is home ayumu -> arcana.";
+        String klee = this.homeService.ayumuHome();
+        res = res + klee;
+        return res;
+    }
 }

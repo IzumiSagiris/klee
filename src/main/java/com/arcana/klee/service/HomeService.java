@@ -14,4 +14,8 @@ public class HomeService {
     public String fischlHome() {
         return "fischl";
     }
+
+    public String ayumuHome() {
+        return "ayumu";
+    }
 }
