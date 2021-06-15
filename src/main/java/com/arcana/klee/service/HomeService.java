@@ -10,4 +10,8 @@ public class HomeService {
     public String kleeHome() {
         return "klee";
     }
+
+    public String fischlHome() {
+        return "fischl";
+    }
 }

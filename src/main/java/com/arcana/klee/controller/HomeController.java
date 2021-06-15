@@ -17,9 +17,18 @@ public class HomeController {
 
     @ResponseBody
     @GetMapping(value = {"/home/klee"}, produces = {"application/json"})
-    public String arcana() throws Exception {
+    public String klee() throws Exception {
         String res = "this is home -> arcana.";
         String klee = this.homeService.kleeHome();
+        res = res + klee;
+        return res;
+    }
+
+    @ResponseBody
+    @GetMapping(value = {"/home/fischl"}, produces = {"application/json"})
+    public String fischl() throws Exception {
+        String res = "this is home -> arcana.";
+        String klee = this.homeService.fischlHome();
         res = res + klee;
         return res;
     }
